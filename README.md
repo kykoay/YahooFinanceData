@@ -7,7 +7,7 @@ Thanks to the discussion on StackOverflow and the effort of Jev Kuznetsov, I am 
 Finance data. 
 
 ## What is contained in this repository
-* ###  YFData.py
+### 1.  YFData.py
 #### Description:
 This is the module that has two classes. The first class is the YahooPrice class that allows the user to create objects containing tickets, 
 time range to retrieve data. The user can then access the attributes of the object. Of particular interest is the df attribute, as that is
@@ -15,6 +15,6 @@ a data frame containing the date , open,close,adjusted close , high, low prices 
 
 The second class available on this module is the YahooFx class. Upon initiation, the user can access the bid price attribute of the foreign 
 currency. Note that there are various data like previous close price, interday range etc. I will add those attributes in the future.
-* ### Illustration.py
+### 2. Illustration.py
 #### Description:
 Illustration.py is a script that shows how the YFData.py module is used.
