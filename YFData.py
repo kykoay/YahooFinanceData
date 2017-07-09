@@ -35,7 +35,7 @@ class YahooFx(object):
 	def __init__ (self,fxticker):
 		self.fxticker = fxticker
 		self.url = urllib.urlopen('https://ca.finance.yahoo.com/quote/{0}/?p={1}'.format(self.fxticker,self.fxticker)).read()
-		self.rawprice = self.url.split('"bid":{"raw":')[1].split(',"fmt"')[0]
-		###Note there are other data points of interest, you can choose to parse them out from the returned html that has json in it.Eg Previous Close price etc
-
+		self.headlinequote = self.url.split('"symbol":"{0}"'.format(self.fxticker)+',"price":{"regularMarketOpen":{"raw":')[1].split(',"regularMarketPrice":{"raw":')[1].split(',"fmt"')[0]
+		self.bid = self.url.split('"symbol":"{0}"'.format(self.fxticker)+',"price":{"regularMarketOpen":{"raw":')[1].split('"bid":{"raw":')[1].split(',"fmt"')[0]
+		self.ask = self.url.split('"symbol":"{0}"'.format(self.fxticker)+',"price":{"regularMarketOpen":{"raw":')[1].split('"ask":{"raw":')[1].split(',"fmt"')[0]
 

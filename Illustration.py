@@ -8,5 +8,5 @@ print check.ticker
 print check.data
 print check.df.tail(n=5) #Note if you remove .tail(n=5) you get all the data in a dataframe format for the range of date you specified
 
-CADUSD = YahooFx('2017-05-23',"CAD=X") 
-print CADUSD.rawprice
+CADUSD = YahooFx("CAD=X") 
+print CADUSD.headlinequote
